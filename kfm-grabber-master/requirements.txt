@@ -1,0 +1,5 @@
+requests
+sqlalchemy
+pytz
+psycopg2
+BeautifulSoup
