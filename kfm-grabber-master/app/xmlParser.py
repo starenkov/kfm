@@ -163,8 +163,6 @@ class Parser:
             if dict_of_data:
                 for data in dict_of_data.values():
                     sorting_string += data + '. '
-            else:
-                continue
             un_individuals['designation'] = sorting_string
 
             dict_of_data = value.get('nationality')
@@ -172,8 +170,6 @@ class Parser:
             if dict_of_data:
                 for data in dict_of_data.values():
                     sorting_string += data + '. '
-            else:
-                continue
             un_individuals['nationality'] = sorting_string
 
             dict_of_data = value.get('list_type')
@@ -181,8 +177,6 @@ class Parser:
             if dict_of_data:
                 for data in dict_of_data.values():
                     sorting_string += data + '. '
-            else:
-                continue
             un_individuals['list_type'] = sorting_string
 
             dict_of_data = value.get('last_day_updated')
@@ -190,8 +184,6 @@ class Parser:
             if dict_of_data:
                 for data in dict_of_data.values():
                     sorting_string += data + '. '
-            else:
-                continue
             un_individuals['last_day_updated'] = sorting_string
 
             list_of_data = value.get('individual_alias')
@@ -200,8 +192,6 @@ class Parser:
                 for key, data in dict_of_data.items():
                     if data:
                         sorting_string += key + ': ' + data + '. '
-                    else:
-                        continue
             un_individuals['individual_alias'] = sorting_string
 
             dict_of_data = value.get('individual_address')
@@ -209,8 +199,6 @@ class Parser:
             for key, data in dict_of_data.items():
                 if data:
                     sorting_string += key + ': ' + data + '. '
-                else:
-                    continue
             un_individuals['individual_address'] = sorting_string
 
             dict_of_data = value.get('individual_date_of_birth')
@@ -218,8 +206,6 @@ class Parser:
             for key, data in dict_of_data.items():
                 if data:
                     sorting_string += key + ': ' + data + '. '
-                else:
-                    continue
             un_individuals['individual_date_of_birth'] = sorting_string
 
             list_of_data = value.get('individual_place_of_birth')
@@ -229,8 +215,6 @@ class Parser:
                     for key, data in dict_of_data.items():
                         if data:
                             sorting_string += key + ': ' + data + '. '
-                        else:
-                            continue
             un_individuals['individual_place_of_birth'] = sorting_string
 
             list_of_data = value.get('individual_document')
@@ -240,8 +224,6 @@ class Parser:
                     for key, data in dict_of_data.items():
                         if data:
                             sorting_string += key + ': ' + data + '. '
-                        else:
-                            continue
             un_individuals['individual_document'] = sorting_string
 
             array_individuals.append(un_individuals)
@@ -305,10 +287,7 @@ class Parser:
                     for key, data in dict_of_data.items():
                         if data:
                             sorting_string += key + ': ' + data + '. '
-                        else:
-                            continue
-            else:
-                continue
+
             un_entities['entity_alias'] = sorting_string
 
             list_of_data = value.get('entity_address')
@@ -318,10 +297,7 @@ class Parser:
                     for key, data in dict_of_data.items():
                         if data:
                             sorting_string += key + ': ' + data + '. '
-                        else:
-                            continue
-            else:
-                continue
+
             un_entities['entity_address'] = sorting_string
 
             array_entities.append(un_entities)
